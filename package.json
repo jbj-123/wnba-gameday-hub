@@ -1,0 +1,19 @@
+{
+  "name": "wnba-gameday-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "node --env-file=.env fetch-raw.mjs",
+    "build-db": "node build-db.mjs",
+    "check": "node check.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  }
+}
