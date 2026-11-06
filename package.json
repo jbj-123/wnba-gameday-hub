@@ -9,7 +9,9 @@
     "build-db": "node build-db.mjs",
     "check": "node check.mjs",
     "start": "node --env-file=.env server.mjs",
-    "dev": "node --watch --env-file=.env server.mjs"
+    "dev": "node --watch --env-file=.env server.mjs",
+    "load-sr": "node load-sr.mjs",
+    "compare": "node compare-sources.mjs"
   },
   "keywords": [],
   "author": "",

@@ -5,7 +5,7 @@ const SR_KEY = process.env.SPORTRADAR_KEY;
 const BDL_KEY = process.env.BALLDONTLIE_KEY;
 
 const SR_LEVEL = "trial"; // use "production" if that's your key type
-const SEASON = 2025;
+const SEASON = 2026;
 const DELAY_MS = 3000;    // pause between calls
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -58,6 +58,9 @@ await download(`sr-schedule-${SEASON}-REG`, () =>
     getJson(`${SR}/games/${SEASON}/REG/schedule.json`, srHeaders)
 );
 
+await download(`sr-schedule-${SEASON}-PST`, () =>
+  getJson(`${SR}/games/${SEASON}/PST/schedule.json`, srHeaders)
+);
 // ---------- BALLDONTLIE ----------
 const bdlHeaders = { Authorization: BDL_KEY }; // no "Bearer"
 
